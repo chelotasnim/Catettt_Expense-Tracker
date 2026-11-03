@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Catet - Journaling Pengeluaranmu</title>
+</head>
+
+<body>
+    <header>
+        <h1><span>Cat</span>ettt.</h1>
+    </header>
+
+    <form id="expenseForm">
+        <div class="input-group">
+            <input type="date" id="inputTanggal" required>
+        </div>
+        <div class="input-group split">
+            <div class="option-box">
+                <input type="radio" name="type" value="Kebutuhan" checked> Kebutuhan
+            </div>
+            <div class="option-box">
+                <input type="radio" name="type" value="Keinginan"> Keinginan
+            </div>
+        </div>
+        <div class="input-group with-holder">
+            <label>IDR</label>
+            <input type="number" id="inputNominal" placeholder="0,00" required>
+            <button type="button" id="addThousand">000</button>
+            <button type="button" id="addHundred">00</button>
+        </div>
+        <div class="input-group">
+            <input type="text" id="inputKeterangan" placeholder="Keterangan" required>
+        </div>
+        <button type="submit" id="submitBtn" class="on">Catettt!</button>
+    </form>
+
+    <div class="data-container">
+        <table id="dataTable">
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
